@@ -19,14 +19,12 @@ supported by sound methodology — and to rebuild the pipeline correctly.
 - **Selected source (under review):** https://github.com/anshpandey96/Credit-Card-Fraud-Detection
 - **Dataset source:** https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
   (ULB Machine Learning Group — 284,807 transactions, 492 frauds)
-- **Backup/secondary source referenced:** https://github.com/itsaryanchauhan/credit-card-fraud-detection
 
 ## Repository contents
 | File | Description |
 |------|-------------|
 | `fraud_detection.ipynb` | Complete, executable analysis notebook (data loading → EDA → feature engineering → modeling → evaluation → error analysis). |
-| `build_notebook.py` | Builder script that generates the notebook from reviewable Python source. |
-| `report.pdf` | Full written report (8 sections + executive summary). |
+| `report.pdf` | Full written report. |
 | `requirements.txt` | Python dependencies. |
 | `README.md` | This file. |
 
