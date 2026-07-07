@@ -23,7 +23,7 @@ supported by sound methodology — and to rebuild the pipeline correctly.
 ## Repository contents
 | File | Description |
 |------|-------------|
-| `fraud_detection.ipynb` | Complete, executable analysis notebook (data loading → EDA → feature engineering → modeling → evaluation → error analysis). |
+| `fraud_detection.ipynb` | Complete, executable analysis notebook. |
 | `report.pdf` | Full written report. |
 | `requirements.txt` | Python dependencies. |
 | `README.md` | This file. |
@@ -51,14 +51,15 @@ jupyter notebook fraud_detection.ipynb
 # or execute headless:
 jupyter nbconvert --to notebook --execute fraud_detection.ipynb --output fraud_detection.ipynb
 ```
+You can also execute via google colab.
 
 All randomness is seeded (`RANDOM_STATE = 42`) for reproducibility.
 
 ## Key findings (summary)
 - A trivial "always legit" classifier scores ~99.83% accuracy — proving accuracy is meaningless here.
 - Faithfully reproducing the author's own pipeline does **not** reproduce the advertised
-  "100% recall / 94% precision" for Logistic Regression; the precision claim in particular collapses.
+  "100% recall / 94% precision" for Logistic Regression, the precision claim in particular collapses.
 - Judged on PR-AUC / MCC / F2, tree ensembles (Random Forest / XGBoost) outperform logistic regression,
   and threshold tuning on the precision-recall curve is essential to manage the FP/FN trade-off.
 - The author's code correctly splits before resampling (no leakage) and selects by F1 — genuine strengths
-  we credit; the problems are in the *claims* and *metric choices*, not the implementation.
+  we credit, the problems are in the *claims* and *metric choices*, not the implementation.
